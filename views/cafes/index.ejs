@@ -1,0 +1,36 @@
+<% include ../partials/header %>
+
+<div class="row headers">
+    <div class="cafes-header-screen"></div>
+    <div class="left-header">
+      <div class="cafes-header-content">
+        <h1>View our selection of cafes</h1>
+        <hr>
+        <p>From New York to Atlanta we have a variety<br/>
+of cafes you can visit.</p>
+      </div>
+    </div>
+    <div class="right-header">
+      <div class="cafes-header-content">
+        <h1>Know any good places?</h1>
+        <hr>
+        <a id="button" href="/cafes/new">Add New Cafe</a>
+      </div>
+    </div>
+</div>
+
+
+  <div class="text-center container cafes-circle">
+    <% cafes.forEach(function(cafe) { %>
+      <div class="col-md-4 col-sm-6">
+        <div class="thumbnail">
+          <img src="<%= cafe.image %>">
+          <div class="cafe-name">
+            <%= cafe.name %>
+          </div>
+        </div>
+      </div>
+    <% }) %>
+  </div>
+
+<% include ../partials/footer %>

@@ -1,0 +1,125 @@
+body {
+  background-color: #ebebeb;
+}
+
+#nav {
+  background-color: rgba(52, 34, 31, 0.9);
+  border-color: rgba(52, 34, 31, 0.5);
+  margin: 0px 0px;
+  z-index: 5;
+  height: 0;
+  width: 100%;
+  border-radius: 0;
+}
+
+.navbar-default .navbar-nav>li>a {
+  color: #ebebeb;
+}
+
+#logo {
+  background-image: url("../img/CafeHub.svg");
+  background-repeat: no-repeat;
+  width: 8em;
+  margin-top: 10px;
+  margin-left: 7px;
+}
+
+/* CAFES INDEX PAGE */
+.headers {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0px auto 30px;
+}
+
+.left-header {
+  display: inline-block;
+  width: 50%;
+  height: 30em;
+  margin: 0 0 0 -168px;
+  background-image: url("../img/image6.jpg");
+  background-size: cover;
+}
+
+.right-header {
+  display: inline-block;
+  width: 50%;
+  height: 30em;
+  margin: 0 0px;
+  background-image: url("../img/image7.jpg");
+  background-size: cover;
+  position: absolute;
+}
+
+.cafes-header-screen {
+  background-color: rgba(0, 0, 0, .5);
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  height: 30em;
+}
+
+.cafes-header-content {
+  position: relative;
+  text-align: center;
+  z-index: 10;
+  margin-top: 10em;
+}
+
+.cafes-header-content h1 {
+  font-family: 'Marcellus', serif;
+  color: #ebebeb;
+  font-size: 30px
+}
+
+.cafes-header-content hr {
+  border: 2px solid #e19e8a;
+  width: 20%;
+}
+
+.cafes-header-content p {
+  color: #ebebeb;
+  font-family: 'Frank Ruhl Libre', sans-serif;
+  font-size: 15px;
+  letter-spacing: 1.5px;
+}
+
+.cafes-header-content #button {
+  color: #ebebeb;
+  border: 1px solid #ebebeb;
+  border-radius: 12px 12px;
+  padding: 10px 28px;
+  background-color: rgba(235, 235, 235, 0.2);
+  font-family: 'Marcellus', serif;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+.thumbnail {
+  padding: 10px;
+  border-radius: 150px;
+  background-color: #A98772;
+  width: 300px;
+  height: 300px;
+}
+
+.thumbnail img {
+  border-radius: 139px;
+  width: 278px;
+  height: 278px;
+}
+
+.cafe-name {
+  color: #ebebeb;
+  background-color: rgba(52, 34, 31, 0.8);
+  width: 230px;
+  height: 100px;
+  margin: -108px auto 0px;
+  border-radius: 0px 0px 360px 360px;
+  position: relative;
+  padding-top: 30px;
+  font-family: 'Marcellus', serif;
+  font-size: 20px;
+  letter-spacing: 2px;
+}

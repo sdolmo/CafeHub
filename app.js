@@ -13,8 +13,8 @@ var bodyParser = require("body-parser"),
 
 // ROUTES
 // var commentRoutes = require("./routes/comments"),
-//     cafeRoutes = require("./routes/cafe"),
-var     indexRoutes = require("./routes/index");
+var    cafeRoutes = require("./routes/cafe"),
+       indexRoutes = require("./routes/index");
 
 mongoose.connect("mongodb://localhost/cafe_hub");
 app.use(bodyParser.urlencoded({extended: true}));
@@ -35,6 +35,7 @@ app.use(flash());
 // passport.deserializeUser(User.deserializeUser());
 
 app.use("/", indexRoutes);
+app.use("/cafes", cafeRoutes);
 
 app.listen(3000, function(){
   console.log("Go to 3000!");
