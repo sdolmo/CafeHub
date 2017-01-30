@@ -21,9 +21,35 @@ body {
   background-repeat: no-repeat;
   width: 8em;
   margin-top: 10px;
-  margin-left: 7px;
+  margin-left: 10px;
 }
 
+#login-info {
+  margin-right: 10px
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+  color: #e19e8a;
+}
+
+.alert{
+  position: absolute;
+  z-index: 1000;
+  width: 99%;
+  text-align: center;
+}
+
+.alert-danger {
+    color: #ebebeb;
+    background-color: rgba(255, 0, 0, 0.72);
+    border-color: transparent
+  }
+
+.alert-success {
+    color: #ebebeb;
+    background-color: rgba(60, 118, 61, 0.73);
+    border-color: transparent;
+  }
 /* CAFES INDEX PAGE */
 .headers {
   position: relative;
@@ -36,7 +62,7 @@ body {
   display: inline-block;
   width: 50%;
   height: 30em;
-  margin: 0 0 0 -168px;
+  margin: 0 0 0 -170px;
   background-image: url("../img/image6.jpg");
   background-size: cover;
 }
@@ -96,7 +122,11 @@ body {
   text-decoration: none;
 }
 
-.thumbnail {
+#button:hover {
+  background-color: rgba(225, 158, 138, 0.5);
+}
+
+#cafes-index .thumbnail {
   padding: 10px;
   border-radius: 150px;
   background-color: #A98772;
@@ -104,7 +134,7 @@ body {
   height: 300px;
 }
 
-.thumbnail img {
+#cafes-index .thumbnail img {
   border-radius: 139px;
   width: 278px;
   height: 278px;
@@ -122,4 +152,237 @@ body {
   font-family: 'Marcellus', serif;
   font-size: 20px;
   letter-spacing: 2px;
+}
+
+.cafe-name a {
+  color: #ebebeb;
+}
+
+/* LOGIN/SIGN UP PAGE */
+.auth-image {
+  top: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/image8.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.auth-box {
+  position: absolute;
+  top: 15%;
+  left: 5%;
+  padding: 100px;
+  background-color: rgba(255, 255, 255, 0.2);
+  text-align: center;
+  width: 40%;
+  height: 80%;
+}
+
+.auth-box h1 {
+  color: #ebebeb;
+  font-family: 'Marcellus', serif;
+  font-size: 50px;
+  margin: 30px auto 10px;
+  letter-spacing: 2px;
+}
+
+.auth-box .letters{
+  margin: 10px auto;
+  background-color: rgba(255, 255, 255, 0);
+  border: 2px solid #ebebeb;
+  width: 100%;
+  height: 40px;
+  outline: none;
+  font-size: 20px;
+  font-family: 'Frank Ruhl Libre', serif;
+  text-align: center;
+  color: #ebebeb;
+  letter-spacing: 2px;
+}
+
+.auth-content {
+  position: relative;
+
+}
+
+.auth-box .button {
+  color: #ebebeb;
+  border: 1px solid #ebebeb;
+  border-radius: 10px 10px;
+  padding: 3px 28px;
+  background-color: rgba(235, 235, 235, 0.2);
+  font-family: 'Marcellus', serif;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  outline: none;
+}
+
+.auth-box .button:hover {
+  background-color: rgba(225, 158, 138, 0.5);
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #ebebeb;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #ebebeb;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #ebebeb;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #ebebeb;
+}
+
+/*SHOW PAGE*/
+
+#show-cafe .thumbnail img {
+  width: 100%;
+}
+
+#show-cafe .thumbnail {
+  padding: 0;
+}
+
+#show-cafe .thumbnail .caption-full {
+  padding: 20px;
+  border: 2px solid #fff;
+  background-color: #f4f4f4;
+  font-family: 'Marcellus', serif;
+}
+
+#show-cafe {
+  margin: 30px auto;
+}
+
+.map {
+  margin: 30px auto;
+}
+
+.buttons {
+  text-align: center;
+  line-height: 60px
+}
+
+.buttons a{
+  color: #000;
+  border: 2px solid #fff;
+  border-radius: 10px 10px;
+  padding: 10px 28px;
+  background-color: rgba(235, 235, 235, 0.2);
+  font-family: 'Marcellus', serif;
+  font-size: 15px;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+.show-cafe-button:hover {
+  background-color: rgba(225, 158, 138, 0.5)
+}
+
+.caption-full h2 {
+  margin-top: -2px;
+}
+
+#delete-form {
+  display: inline;
+}
+
+.well {
+  font-family: 'Marcellus', serif;
+}
+
+.well .add-comment {
+  color: rgb(225, 158, 138);
+  font-weight: 900;
+}
+
+/* NEW/EDIT FORMS */
+
+.new-edit-image {
+  top: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/image9.jpg");
+  background-repeat: no-repeat;
+  background-size:  cover;
+  z-index: -10;
+}
+
+.new-edit-image .screen{
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.new-edit-container {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.new-edit-box {
+  padding: 50px;
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 40%;
+  height: 80%;
+  margin: 0px auto;
+}
+
+.new-edit-box h1 {
+  color: #ebebeb;
+  font-family: 'Marcellus', serif;
+  font-size: 40px;
+  margin: 30px auto 20px;
+  letter-spacing: 2px;
+}
+
+.new-edit-box .letters {
+  margin: 5px auto;
+  background-color: rgba(255, 255, 255, 0);
+  border: 2px solid #ebebeb;
+  width: 70%;
+  height: 30px;
+  outline: none;
+  font-size: 15px;
+  font-family: 'Frank Ruhl Libre', serif;
+  text-align: left;
+  color: #ebebeb;
+  letter-spacing: 2px;
+}
+
+.new-edit-box .button {
+  color: #ebebeb;
+  border: 1px solid #ebebeb;
+  border-radius: 10px 10px;
+  padding: 3px 28px;
+  background-color: rgba(235, 235, 235, 0.2);
+  font-family: 'Marcellus', serif;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  outline: none;
+}
+
+.new-edit-box .button:hover {
+  background-color: rgba(225, 158, 138, 0.5);
+}
+
+.new-edit-back-button {
+  color: #ebebeb;
+  font-family: 'Marcellus', serif;
+  position: relative;
+  right: 30%;
+}
+
+.new-edit-back-button:hover {
+  color: rgba(52, 34, 31, 0.9);
+  text-decoration: none;
 }

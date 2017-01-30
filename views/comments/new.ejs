@@ -1,0 +1,21 @@
+<% include ../partials/header %>
+
+<div class="new-edit-image">
+  <div id="new-edit-form" class="new-edit-container">
+    <div class="new-edit-box">
+      <a class="new-edit-back-button" href="/cafes/<%= cafe._id %>">&larr; Back to <%= cafe.name %></a>
+        <h1>Add a Comment to <br/> <%= cafe.name %></h1>
+        <form action="/cafes/<%= cafe._id %>/comments" method="POST">
+        <div class="form-group">
+          <input class="letters" type="text" name="comment[text]" placeholder="Comment">
+        </div>
+        <div class="form-group">
+          <button class="button">Submit!</button>
+        </div>
+      </form>
+      <div class="screen"></div>
+    </div>
+  </div>
+</div>
+
+<% include ../partials/footer %>

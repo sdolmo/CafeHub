@@ -1,0 +1,62 @@
+<% include ../partials/header %>
+
+<div class="container">
+  <div id="show-cafe" class="row">
+    <div class="col-md-3">
+      <iframe class="map"
+        width="100%"
+        height="100%"
+        frameborder="0" style="border:0"
+        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBTbGx_g_3vllA6IEhPn4mCBW5MWdvRFaA&q=<%= cafe.name %>,<%= cafe.location %>+<%= cafe.state %>" allowfullscreen>
+      </iframe>
+      <div class="buttons">
+        <a class="show-cafe-button" href="/cafes/new">Add New Cafe</a><br/>
+        <a class="show-cafe-button" href="/cafes">View All Cafes</a>
+      </div>
+    </div>
+    <div class="col-md-9">
+      <div class="thumbnail">
+        <img class="img-responsive" src="<%= cafe.image %>">
+        <div class="caption-full">
+          <h4 class="pull-right"><%= cafe.location %>, <%= cafe.state %></h4>
+          <h2><%= cafe.name %></h2>
+          <p><%= cafe.description %></p>
+          <p><em>Submited By <%= cafe.author.username %></em></p>
+          <% if(currentUser && cafe.author.id.equals(currentUser._id)) { %>
+            <a class="btn btn-xs btn-warning" href="/cafes/<%= cafe._id%>/edit">Edit</a>
+            <form id="delete-form" action="/cafes/<%= cafe._id %>?_method=DELETE" method="POST">
+              <button class="btn btn-xs btn-danger">Delete</button>
+            </form>
+          <% } %>
+        </div>
+      </div>
+      <div class="well">
+        <div class="text-right">
+          <a class="add-comment" href="/cafes/<%= cafe._id %>/comments/new">Add a Comment</a>
+        </div>
+        <hr/>
+        <% cafe.comments.forEach(function(comment){ %>
+          <div class="row">
+            <div class="col-md-12">
+              <h4><%= comment.author.username %></h4>
+              <span class="pull-right">10 days ago</span>
+              <p>
+                <%= comment.text %>
+              </p>
+              <% if(currentUser && comment.author.id.equals(currentUser._id)) {%>
+              <a class="btn btn-xs btn-warning" href="/cafes/<%= cafe._id %>/comments/<%= comment.id %>/edit">
+                Edit
+              </a>
+              <form id="delete-form" action="/cafes/<%= cafe._id %>/comments/<%= comment.id %>?_method=DELETE" method="POST">
+                <input type="submit" class="btn btn-xs btn-danger" value="Delete">
+              </form>
+              <% } %>
+            </div>
+          </div>
+        <% }) %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<% include ../partials/footer %>

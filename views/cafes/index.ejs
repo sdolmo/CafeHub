@@ -20,13 +20,13 @@ of cafes you can visit.</p>
 </div>
 
 
-  <div class="text-center container cafes-circle">
+  <div class="text-center container cafes-circle" id="cafes-index">
     <% cafes.forEach(function(cafe) { %>
       <div class="col-md-4 col-sm-6">
-        <div class="thumbnail">
+        <div class="thumbnail" id="cafe-index">
           <img src="<%= cafe.image %>">
           <div class="cafe-name">
-            <%= cafe.name %>
+            <a href="/cafes/<%= cafe._id %>" ><%= cafe.name %></a>
           </div>
         </div>
       </div>

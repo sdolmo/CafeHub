@@ -9,7 +9,7 @@ body {
   position: relative;
   color: white;
   height: 2.2em;
-  margin-left: 20px;
+  margin-left: 30px;
   margin-top: 10px;
 }
 
@@ -38,6 +38,10 @@ body {
   font-size: 15px;
   letter-spacing: 1px;
   background-color: rgba(235, 235, 235, 0.2);
+}
+
+#landing-header .button:hover {
+  background-color: rgba(225, 158, 138, 0.5);
 }
 
 .slideshow {
