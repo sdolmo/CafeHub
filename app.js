@@ -16,7 +16,6 @@ var    cafeRoutes = require("./routes/cafe"),
        commentRoutes = require("./routes/comments"),
        indexRoutes = require("./routes/index");
 
-// mongoose.connect("mongodb://localhost/cafe_hub");
 mongoose.connect("mongodb://sylvia:muppets247@ds139939.mlab.com:39939/cafehub");
 
 app.use(bodyParser.urlencoded({extended: true}));
