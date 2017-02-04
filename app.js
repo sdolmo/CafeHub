@@ -16,7 +16,8 @@ var    cafeRoutes = require("./routes/cafe"),
        commentRoutes = require("./routes/comments"),
        indexRoutes = require("./routes/index");
 
-mongoose.connect("mongodb://sylvia:muppets247@ds139939.mlab.com:39939/cafehub");
+mongoose.connect(process.env.DATABASEURL);
+app.set('port', process.env.PORT || 8080);
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
@@ -47,6 +48,6 @@ app.use("/", indexRoutes);
 app.use("/cafes", cafeRoutes);
 app.use("/cafes/:id/comments", commentRoutes);
 
-app.listen(3000, function(){
-  console.log("Go to 3000!");
+app.listen(app.get("port"), function(){
+  console.log("Serving it up, Sylvia's way :)");
 })
