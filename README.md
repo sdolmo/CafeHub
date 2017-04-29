@@ -6,7 +6,7 @@ CafeHub is a dynamic app that utilizes ExpressJS, MongoDB, and Mongoose to prese
 
 ##Demo
 
-[CafeHub - Live DEMO] (https://cafe-hubs.herokuapp.com/cafes)
+[CafeHub - Live DEMO](https://cafe-hubs.herokuapp.com/cafes)
 
 ## Tools
 
